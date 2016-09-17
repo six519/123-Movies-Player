@@ -37,7 +37,7 @@ class OneTwoThreePlayer(QtGui.QMainWindow):
 
     def initUI(self):
         #self.setWindowFlags(QtCore.Qt.WindowStaysOnTopHint)
-        self.setWindowTitle("123movies.to player and subtitle loader")
+        self.setWindowTitle("123 Movies Player")
         self.widget = QtGui.QWidget(self)
         self.setCentralWidget(self.widget)
         self.clickSound = QtGui.QSound("resources/push.wav")
