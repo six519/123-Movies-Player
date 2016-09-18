@@ -50,19 +50,23 @@ class OneTwoThreePlayer(QtGui.QMainWindow):
 
         self.loadButton = QtGui.QPushButton()
         self.loadButton.setIcon(QtGui.QIcon("resources/down.png"))
+        self.loadButton.setToolTip("Load movie")
         self.connect(self.loadButton, QtCore.SIGNAL("clicked()"), self.loadVideo)
 
         self.loadSubtitle = QtGui.QPushButton()
         self.loadSubtitle.setIcon(QtGui.QIcon("resources/Text-32.png"))
+        self.loadSubtitle.setToolTip("Load subtitle")
         self.connect(self.loadSubtitle, QtCore.SIGNAL("clicked()"), self.loadSubtitleFile)
 
         self.fullScreenButton = QtGui.QPushButton()
         self.fullScreenButton.setIcon(QtGui.QIcon("resources/fullscreen.png"))
+        self.fullScreenButton.setToolTip("Fullscreen mode")
         self.connect(self.fullScreenButton, QtCore.SIGNAL("clicked()"), self.setFullscreen)
 
         self.volumeSlider = QtGui.QSlider(QtCore.Qt.Horizontal, self)
         self.volumeSlider.setMaximum(PLAYER_VOLUME_MAX_SLIDER)
         self.volumeSlider.setValue(self.vlcMediaPlayer.audio_get_volume())
+        self.volumeSlider.setToolTip("Adjust volume")
         self.connect(self.volumeSlider, QtCore.SIGNAL("valueChanged(int)"), self.changeVolume)
         
         self.videoFrame = QtGui.QFrame()
