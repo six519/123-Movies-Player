@@ -9,3 +9,8 @@ Install Requirements
 
     brew install pyqt
     pip install -r requirements.txt
+
+Note
+====
+
+No video controls yet!!!
